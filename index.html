@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link type="text/css" href="CSS/main.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous"
+        />
+        <script src="jquery-3.5.1.min.js"></script>
+        <script src="multislider.min.js"></script>
+        <title>solar seeds</title>
+
+    </head>
+    <body>
+        <!--barra de navegaçao-->
+        <nav>
+            <!--barra de navegação tem duas partes, a superior e a inferior-->
+            <!--aqui esta a primeira e nessa parte coloquei o logotipo a parte de minha conta e o carrinho de compras-->
+            <div class="navbar-top">
+                <div>
+                    <button id="menuButton"><i class="fas fa-bars"></i></button>
+                    <!--Logo-->
+                    <a href="index.html">
+                        <h2 class="logo"> <img src="logos/logo cabeçalho.png" alt="semente Logo" 
+                            width="50" height="45"> <solar seeds> </solar></h2>
+                
+                    </a>
+                </div>
+                <div>
+                    <!--My account part-->
+                    <div class="account">
+                        <a href="index.html">
+                            <button class="account-btn">
+                                <i class="fas fa-user-alt"></i>
+                            </button>
+                            <span class="account-text">Minha Conta</span>
+                        </a>
+                        <!--quando clica em  btnShowAccountInfo nessa seção e exibido-->
+                    </div>
+                    <!--carrinho de compras-->
+                    <div class="shopping-cart">
+                        <div class="sum-prices">
+                            <!--logo carrinho-->
+                            <i
+                                class="fas fa-shopping-cart shoppingCartButton"
+                            ></i>
+                            <!--o preço total do carrinho de compras -->
+                            <h6 id="sum-prices"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- parte inferior da barra de navegação -->
+            <!-- aqui coloco os links para as outras paginas e links de navegação -->
+            <div class="navbar" id="navbar">
+                <div class="links">
+                    <ul>
+                        <li class="nav-links">
+                            <a href="mobil.html" class="link">vasos</a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="mobil.html" class="link">substratos</a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="mobil.html" class="link">sementes</a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="mobil.html" class="link">ferramentas</a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="mobil.html" class="link">nosso time</a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="mobil.html" class="link">quem somos</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- a barra de pesuisa ficar no lado direito dos links -->
+                <div class="searchbar">
+                    <form action="#">
+                        <input type="search" placeholder= "procurar produtos" />
+                        <i class="fa fa-search" id="search-icon"></i>
+                    </form>
+                </div>
+            </div>
+            <div class="producstOnCart hide">
+                <div class="overlay"></div>
+                <div class="top">
+                    <button id="closeButton">
+                        <i class="fas fa-times-circle"></i>
+                    </button>
+                    <h3>carrinho</h3>
+                </div>
+                <ul id="buyItems">
+                    <h4 class="empty">seu carrinho esta vazio</h4>
+                </ul>
+                <button class="btn checkout hidden">finalizar compra</button>
+            </div>
+        </nav>
+        <header id="hearderSlide">
+            <div class="MS-content">
+                <a href="detail_page.html" class="item">
+                    <img src="produtos/sem-hort-g-pimenta-malagueta0-1200x1200.jpg" />
+                </a>
+                <a href="detail_page.html" class="item">
+                    <img src="produtos/kit-rainbow-raiz_1_1.webp" />
+                </a>
+               
+                <a href="detail_page.html" class="item">
+                    <img src="produtos/tp-alface-americana-astra-2-mx0-1200x1200.webp" />
+                </a>
+                <a href="detail_page.html" class="item">
+                    <img src="produtos/4-1200x1200.webp" />
+                </a>
+                <a href="detail_page.html" class="item">
+                    <img src="produtos/BANDEJA-128-CELULAS-C-ABA-FINO-PRETO-1200x1200.webp" />
+                </a>
+            </div>
+            <div class="MS-controls">
+                <button class="MS-right">
+                    <i class="fas fa-chevron-right fa-3x"></i>
+                </button>
+                <button class="MS-left">
+                    <i class="fas fa-chevron-left fa-3x"></i>
+                </button>
+            </div>
+        </header>
+        <main>
+            <section class="main-section">
+                <div class="product-container">
+                    <h3>sementes populares</h3>
+                    <div class="products">
+                        <div class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="produtos/sem-hort-g-pimenta-malagueta0-1200x1200.jpg"
+                                        alt="semente pimenta malagueta"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="1"
+                                        >
+                                            <i class="fas fa-cart-plus"></i> adicionar ao carrinho 
+                                        </button>
+                                        <a
+                                            href="detail_page.html"
+                                            class="btn btn-small"
+                                            >mais informaçoes</a
+                                        >
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">Semente Pimenta Malagueta</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                     Feltrin 400mg
+                                    </p>
+                                    <h6 class="price">
+                                        R$<span class="priceValue">2</span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="produtos/2-500x500.webp"
+                                        alt=" SEMENTES RUCULA FOLHA LARGA IMPORTADA"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="2"
+                                        >
+                                            <i class="fas fa-cart-plus"></i>adicionar ao carrinho
+                                        </button>
+                                        <a
+                                            href="detail_page.html"
+                                            class="btn btn-small"
+                                            >mais informaçoes</a
+                                        >
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">SEMENTES RUCULA FOLHA LARGA IMPORTADA</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                        TOPSEED 100g
+                                    </p>
+                                    <h6 class="price">
+                                        R$<span class="priceValue">110</span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="produtos/4-1200x1200.webp"
+                                        alt="SEMENTES RUCULA FOLHA LARGA IMPORTADA - 100G - TOPSEED"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="3"
+                                        >
+                                            <i class="fas fa-cart-plus"></i>adicionar ao carrinho
+                                        </button>
+                                        <a
+                                            href="detail_page.html"
+                                            class="btn btn-small"
+                                            >mais informaçoes</a
+                                        >
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">SEMENTES RUCULA FOLHA LARGA IMPORTADA</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                     TOPSEED 50g
+                                    </p>
+                                    <h6 class="price">
+                                        R$<span class="priceValue">93</span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="produtos/933144_1.jpg"
+                                        alt="Semente Temperos e Ervas - Ref.096 - FELTRIN"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="4"
+                                        >
+                                            <i class="fas fa-cart-plus"></i>adicionar ao carrinho
+                                        </button>
+                                        <a
+                                            href="detail_page.html"
+                                            class="btn btn-small"
+                                            >mais informaçoes</a
+                                        >
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName"> SEMENTE TOMILHO</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                        FELTRIN 50g
+                                    </p>
+                                    <h6 class="price">
+                                        R$<span class="priceValue">3</span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section">
+                <div class="pop-mobiles">
+                    <div class="pop-mobiles-1">
+                        <figure>
+                            <img
+                                src="produtos/kit-rainbow-raiz_1_1-PhotoRoom.png-PhotoRoom.png"
+                            />
+                        </figure>
+                        <div>
+                            <h2>VASOS AUTOIRRIGÁVEIS RAINBOW</h2>
+                            <p>
+                                Kit com 7 vasos do tamanho Pequeno
+                                Vasos nas cores: roxo, vermelho, laranja, amarelo, verde claro, verde escuro, azul.
+                                T: 12x11 cm
+                            </p>
+                            <h4>R$169.90</h4>
+                            <a href="compre agora" class="btn"
+                                >COMPRE AGORA<i class="fas fa-angle-right"></i
+                            ></a>
+                        </div>
+                    </div>
+                    <h3>vasos, acessorios e substratos</h3>
+                    <div class="pop-mobiles-2">
+                        <ul class="products">
+                            <li class="product">
+                                <div class="product-under">
+                                    <figure class="product-image">
+                                        <img
+                                            src="produtos/shopping.webp"
+                                            alt="Kit Jardim Pa + Ancinho Rastelo Mini Enxada Aluminio Fundido"
+                                        />
+                                        <div class="product-over">
+                                            <button
+                                                class="btn btn-small addToCart"
+                                                data-product-id="5"
+                                            >
+                                                <i class="fas fa-cart-plus"></i
+                                                >adicionar ao carrinho
+                                            </button>
+                                            <a
+                                                href="detail_page.html"
+                                                class="btn btn-small"
+                                                >mais informaçoes</a
+                                            >
+                                        </div>
+                                    </figure>
+                                    <div class="product-summary">
+                                        <h4 class="productName">Kit Jardim Pa + Ancinho Rastelo Mini Enxada </h4>
+                                        Aluminio Fundido - VISON ALUMINIO
+                                        <span class="stars"></span>
+                                        <h4 class="price">
+                                            R$<span class="priceValue"
+                                                >20</span
+                                            >
+                                        </h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="product-under">
+                                    <figure class="product-image">
+                                        <img
+                                            src="produtos/D_NQ_NP_672323-MLB52524610719_112022-O.webp"
+                                            alt="Regador De Plantas Automatico Pulverizador 1,2 Litros"
+                                        />
+                                        <div class="product-over">
+                                            <button
+                                                class="btn btn-small addToCart"
+                                                data-product-id="6"
+                                            >
+                                                <i class="fas fa-cart-plus"></i
+                                                >adicionar ao carrinho
+                                            </button>
+                                            <a
+                                                href="detail_page.html"
+                                                class="btn btn-small"
+                                                >mais informaçoes</a
+                                            >
+                                        </div>
+                                    </figure>
+                                    <div class="product-summary">
+                                        <h4 class="productName">Regador De Plantas Automatico Pulverizador</h4>
+                                        HUTZ - 1,2 litros
+                                        <span class="stars"></span>
+                                        <h4 class="price">
+                                            R$<span class="priceValue">48</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="product-under">
+                                    <figure class="product-image">
+                                        <img
+                                            src="produtos/945858_1.jpg"
+                                            alt="Vaso Autoirrigável Plástico 600ml Cinza - Ref. 78130/065"
+                                        />
+                                        <div class="product-over">
+                                            <button
+                                                class="btn btn-small addToCart"
+                                                data-product-id="7"
+                                            >
+                                                <i class="fas fa-cart-plus"></i
+                                                >adicionar ao carrinho
+                                            </button>
+                                            <a
+                                                href="detail_page.html"
+                                                class="btn btn-small"
+                                                >mais informaçoes</a
+                                            >
+                                        </div>
+                                    </figure>
+                                    <div class="product-summary">
+                                        <h4 class="productName">Vaso Autoirrigável Plástico</h4>
+                                        TRAMONTINA - 600ml Cinza
+                                        <span class="stars"></span>
+                                        <h4 class="price">
+                                            R$<span class="priceValue">40</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="product-under">
+                                    <figure class="product-image">
+                                        <img
+                                            src="produtos/955772_1_1.jpg"
+                                            alt="Fertilizante Enraizador 140ml - Ref.8000729-U - NUTRIPLAN"
+                                        />
+                                        <div class="product-over">
+                                            <button
+                                                class="btn btn-small addToCart"
+                                                data-product-id="8"
+                                            >
+                                                <i class="fas fa-cart-plus"></i
+                                                >adicionar ao carrinho
+                                            </button>
+                                            <a
+                                                href="detail_page.html"
+                                                class="btn btn-small"
+                                                >mais informaçoes</a
+                                            >
+                                        </div>
+                                    </figure>
+                                    <div class="product-summary">
+                                        <h4 class="productName">Fertilizante Enraizador</h4>
+                                        NUTRIPLAN - 140ml
+                                        <span class="stars"></span>
+                                        <h4 class="price">
+                                            R$<span class="priceValue">15</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="product-under">
+                                    <figure class="product-image">
+                                        <img
+                                            src="produtos/980905_2_1.jpg"
+                                            alt="Substrato Rosa Do Deserto 1kg Marrom TRAMONTINA / REF. 91400030""
+                                        />
+                                        <div class="product-over">
+                                            <button
+                                                class="btn btn-small addToCart"
+                                                data-product-id="9"
+                                            >
+                                                <i class="fas fa-cart-plus"></i
+                                                >adicionar ao carrinho
+                                            </button>
+                                            <a
+                                                href="detail_page.html"
+                                                class="btn btn-small"
+                                                >mais informaçoes</a
+                                            >
+                                        </div>
+                                    </figure>
+                                    <div class="product-summary">
+                                        <h4 class="productName">Substrato Rosa Do Deserto</h4>
+                                        TRAMONTINA - 1kg Marrom
+                                        <span class="stars"></span>
+                                        <h4 class="price">
+                                            R$<span class="priceValue">22</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="product-under">
+                                    <figure class="product-image">
+                                        <img
+                                            src="produtos/BANDEJA-128-CELULAS-C-ABA-FINO-PRETO-1200x1200.webp"
+                                            alt="BANDEJA 128 CÉLULAS C/ ABA FINO PRETO"
+                                        />
+                                        <div class="product-over">
+                                            <button
+                                                class="btn btn-small addToCart"
+                                                data-product-id="10"
+                                            >
+                                                <i class="fas fa-cart-plus"></i
+                                                >adicionar ao carrinho
+                                            </button>
+                                            <a
+                                                href="detail_page.html"
+                                                class="btn btn-small"
+                                                >mais informaçoes</a
+                                            >
+                                        </div>
+                                    </figure>
+                                    <div class="product-summary">
+                                        <h4 class="productName">BANDEJA 128 CÉLULAS C/ ABA FINO PRETO</h4>
+                                        AGRISTORE
+                                        <span class="stars"></span>
+                                        <h4 class="price">
+                                            R$<span class="priceValue">7</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-second">
+                <div class="footer-column-1">
+                    <h3>News</h3>
+                    <a href="#"></a>
+                    <a href="#">Lorem ipsum</a>
+                    <a href="#">dolor sit</a>
+                </div>
+                <div class="footer-column-2">
+                    <h3>ATENDIMENTO AO CLIENTE</h3>
+                    <a href="contato">CONTATO</a>
+                    <a href="rastreie seu pedido">RASTREIE SEU PEDIDO</a>
+                    <a href="termos de compra">TERMOS DE COMPRA</a>
+                    <a href="perguntas frequentes">PERGUNTAS FREQUENTES</a>
+                </div>
+                <div class="footer-column-3">
+                    <h3>SOBRE NOS</h3>
+                    <a href="quem somos">QUEM SOMOS</a>
+                    <a href="nosso serviços">NOSSO SERVIÇOS</a>
+                    <a href="eventos">EVENTOS</a>
+                    <a href="lgpd">LGPD</a>
+                </div>
+            </div>
+            <ul class="footer-last">
+                <li>
+                    <p><i class="fab fa-cc-mastercard"></i></p>
+                </li>
+                <li>
+                    <p><i class="fab fa-cc-paypal"></i></p>
+                </li>
+                <li>
+                    <p><i class="fab fa-cc-visa"></i></p>
+                </li>
+                <li>
+                    <p><i class="fab fa-cc-amex"></i></p>
+                </li>
+            </ul>
+            <button id="back-to-top"> <img src= logos/arrow-up-solid.svg width="30" height="24" > </button>
+        </footer>
+        <script src="script.js"></script>
+        <script src="shopping-cart.js"></script>
+    </body>
+</html>
